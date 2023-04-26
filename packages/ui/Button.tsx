@@ -1,5 +1,9 @@
 import * as React from "react";
 
-export const Button = () => {
-  return <button>Boop</button>;
+type Props = {
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
+};
+
+export const Button = ({onClick}: Props) => {
+  return <button onClick={onClick}>Click ME!</button>;
 };
